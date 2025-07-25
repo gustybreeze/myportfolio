@@ -354,14 +354,22 @@ html {
   border-radius: 10px;
   margin: 20px 0;
 }
-/* 🔵 Python Blue Text Color */
+/* Python Blue Text Color */
 .python-skill-text {
   color: #3776AB;
 }
 
-/* 🔵 Button Hover with Python Blue */
+/* Button Hover with Python Blue */
 .skill-section .btn:hover {
   background-color: #3776AB;
   color: white;
   transition: 0.3s ease;
+}
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
 }
