@@ -354,3 +354,14 @@ html {
   border-radius: 10px;
   margin: 20px 0;
 }
+/* 🔵 Python Blue Text Color */
+.python-skill-text {
+  color: #3776AB;
+}
+
+/* 🔵 Button Hover with Python Blue */
+.skill-section .btn:hover {
+  background-color: #3776AB;
+  color: white;
+  transition: 0.3s ease;
+}
