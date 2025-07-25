@@ -347,10 +347,9 @@ html {
 .hero p {
   color: black;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px gray;
-}
 .skill-section {
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 20px;
 }
 
 .skill-section .logo {
@@ -367,6 +366,7 @@ html {
   max-width: 600px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   margin-top: 10px;
 }
+
