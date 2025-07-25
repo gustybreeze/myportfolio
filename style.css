@@ -312,6 +312,9 @@ footer {
     transform: translateY(0);
   }
 }
+.content {
+  text-align: center;
+}
 .profile-pic {
   width: 150px;
   height: 150px;
