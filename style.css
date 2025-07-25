@@ -348,3 +348,9 @@ html {
   color: black;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px gray;
 }
+.skill-section .cover {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+}
