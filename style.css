@@ -591,3 +591,6 @@ html {
 #coding-journey {
   scroll-margin-top: 100px; /* Adjust as needed */
 }
+html {
+  scroll-behavior: smooth;
+}
