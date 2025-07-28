@@ -2,165 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML Skills - Sameer Kumar Mishra</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Skills</title>
   <style>
-    .skill-section {
-      padding: 60px 20px;
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
       text-align: center;
+      color: #e34c26; /* Red heading text */
+      font-size: 2.5rem;
+      margin-top: 3rem;
+      position: relative;
     }
 
-    .skill-section img.logo {
-      width: 120px;
-    }
-
-    .skill-section img.cover {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-      margin-bottom: 30px;
-      border-radius: 10px;
-    }
-
-    .skill-section h2 {
-      font-size: 2.5em;
-      margin: 20px 0 10px;
-      color: #e34c26;
-    }
-
-    .underline {
+    .section-title::after {
+      content: '';
+      display: block;
       width: 60px;
       height: 3px;
-      background-color: #e34c26;
-      margin: 8px auto 20px auto;
-      border-radius: 0;
-    }
-
-    .skill-section p {
-      font-size: 1.1em;
-      max-width: 800px;
-      margin: 0 auto 30px;
-      line-height: 1.6;
-      color: #444;
+      background-color: #e34c26; /* Red underline */
+      margin: 8px auto 0 auto;
     }
 
     .project-grid {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
     }
 
     .project-card {
-      width: 300px;
-      padding: 20px;
+      background-color: #ffffff;
       border: 1px solid #ddd;
       border-radius: 10px;
-      background: #fff;
+      width: 300px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
     .project-card img {
-      height: 150px;
-      object-fit: contain;
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
       margin-bottom: 15px;
     }
 
     .project-card h3 {
-      color: #e34c26;
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
     }
 
     .project-card p {
+      font-size: 14px;
+      color: #555;
       flex-grow: 1;
     }
 
     .project-card a {
       text-decoration: none;
-      color: white;
-      background-color: #e34c26;
-      padding: 10px 16px;
-      border-radius: 6px;
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #e34c26;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+      transition: background-color 0.3s ease;
     }
+
+    .project-card a:hover {
+      background-color: #c0392b;
+    }
+
   </style>
 </head>
 <body>
-  <section class="skill-section">
-    <img class="logo" src="../images/html_logo.png" alt="HTML Logo">
-    <img class="cover" src="../images/html_cover.jpg" alt="HTML Cover">
 
-    <!-- Welcome -->
-    <h2>Welcome to my HTML Skills</h2>
-    <div class="underline"></div>
-    <p>HTML is the foundation of all websites. It allows us to structure content in a meaningful way. I've used HTML extensively to build my personal projects and understand how the web works under the hood.</p>
+  <section class="section">
+    <h2 class="section-title">My Python Projects</h2>
 
-    <!-- Projects -->
-    <h2>My HTML Projects</h2>
-    <div class="underline"></div>
     <div class="project-grid">
       <div class="project-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" alt="Password Generator">
+        <img src="https://cdn-icons-png.flaticon.com/512/3004/3004613.png" alt="Password Generator">
         <h3>Password Generator</h3>
-        <p>A simple password generator using HTML, CSS, and JavaScript.</p>
+        <p>Generates strong and secure passwords using random combinations of letters, digits, and symbols.</p>
         <a href="#">View Code</a>
       </div>
+
       <div class="project-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/10038/10038288.png" alt="Unit Converter">
+        <img src="https://cdn-icons-png.flaticon.com/512/1986/1986981.png" alt="Unit Converter">
         <h3>Unit Converter</h3>
-        <p>Convert units like length, weight, and temperature using pure HTML + JS.</p>
+        <p>Convert between metric and imperial units like length, weight, and temperature with a clean UI.</p>
         <a href="#">View Code</a>
       </div>
+
       <div class="project-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3575/3575942.png" alt="File Organizer">
+        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="File Organizer">
         <h3>File Organizer</h3>
-        <p>Organizes files by type using Node.js. Built with simple HTML layout.</p>
+        <p>Automatically organizes files in folders based on extensions like .pdf, .jpg, .mp3, etc.</p>
         <a href="#">View Code</a>
       </div>
     </div>
-    <br><br> 
-    <br><br>
-    <!-- Journey -->
-    <h2>My HTML Journey</h2>
-    <div class="underline"></div>
-    <p>I started learning HTML in 2023. Initially I practiced by creating simple pages and forms. Gradually, I moved on to designing full landing pages and integrating CSS and JavaScript. Now I can build static websites confidently and efficiently.</p>
-
-    <!-- Certifications -->
-    <h2>Certifications & Achievements</h2>
-    <div class="underline"></div>
-    <p>
-      - Completed HTML Fundamentals from FreeCodeCamp<br>
-      - Built and deployed 5+ HTML-based projects<br>
-      - Created multiple responsive layouts using Flexbox and Grid
-    </p>
-
-    <!-- Learning Highlights -->
-    <h2>My Learning Highlights</h2>
-    <div class="underline"></div>
-    <p>
-      - Semantic HTML elements<br>
-      - Forms and Input types<br>
-      - Tables and Lists<br>
-      - Embedding media (images, video, audio)<br>
-      - Accessibility basics and SEO-friendly code
-    </p>
-
-    <!-- Why I Love HTML -->
-    <h2>Why I Love HTML</h2>
-    <div class="underline"></div>
-    <p>
-      HTML is simple, powerful, and universally supported. It gives you the ability to create structure from nothing. It's the starting point for every web development journey, and I enjoy the clarity and control it offers.
-    </p>
   </section>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Sameer Kumar Mishra. All rights reserved.</p>
-    </div>
-  </footer>
 </body>
 </html>
