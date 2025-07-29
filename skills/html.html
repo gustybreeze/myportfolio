@@ -88,8 +88,10 @@
 .project-card h3 {
   font-size: 1.4em;
   margin: 15px;
-  color: #e34c26; /* HTML red */
+  color: #e34c26;
+  text-align: left; /*  left-align heading */
 }
+
 
 .project-card p {
   flex-grow: 1;
@@ -99,16 +101,21 @@
 }
 
 .project-card a {
+  display: inline-block;
   margin: 0 15px 15px;
-  padding: 10px;
+  padding: 12px 24px; /* ⬅️ Button ko bada aur comfortable banata hai */
   background-color: #e34c26;
   color: white;
-  text-align: left;
+  text-align: left; /* ⬅️ Left-align text */
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em;
   transition: 0.3s;
+  min-width: 120px; /* ⬅️ Minimum width set kiya gaya hai */
 }
+
+
 
 .project-card a:hover {
   background-color: #c23b1f;
