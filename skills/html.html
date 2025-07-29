@@ -112,6 +112,58 @@
 .project-card a:hover {
   background-color: #cc3f1c;
 }
+.journey-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #e34c26;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #e34c26;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.journey-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #e34c26;
+  transition: transform 0.3s;
+}
+
+.journey-card:hover {
+  transform: translateY(-4px);
+}
+
+.journey-card h3 {
+  margin: 0 0 10px;
+  color: #e34c26;
+  font-size: 1.2em;
+}
+
+.journey-card p {
+  margin: 0;
+  color: #333;
+  font-size: 1em;
+  line-height: 1.6;
+}
 
 
   </style>
@@ -154,10 +206,35 @@
 
 </div>
   
-  <h2>3. My HTML Journey</h2>
-  <p>
-    I began with basic tags like headings, paragraphs, and links. Gradually, I learned about semantic HTML, forms, media, and how to structure content for accessibility and SEO.
-  </p>
+<section class="journey-section">
+  <h2 class="section-title">My HTML Journey</h2>
+
+  <div class="journey-card">
+    <h3>Started with Structure</h3>
+    <p>Explored basic HTML tags like headings, paragraphs, lists, and links.</p>
+  </div>
+
+  <div class="journey-card">
+    <h3>Media & Tables</h3>
+    <p>Learned to embed images, audio, video, and create tables with semantic layout.</p>
+  </div>
+
+  <div class="journey-card">
+    <h3>Forms & Inputs</h3>
+    <p>Practiced creating forms using various input types, validation, and accessibility.</p>
+  </div>
+
+  <div class="journey-card">
+    <h3>Semantic HTML</h3>
+    <p>Used tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code> for better structure and SEO.</p>
+  </div>
+
+  <div class="journey-card">
+    <h3>Mini Projects</h3>
+    <p>Built landing pages, forms, and static websites using only HTML.</p>
+  </div>
+</section>
+
 
   <h2>4. Certifications & Achievements</h2>
   <p>
