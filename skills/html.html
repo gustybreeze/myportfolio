@@ -2,152 +2,223 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML Skills</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Skills - Sameer Kumar Mishra</title>
+  <link rel="stylesheet" href="../style.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
+      background-color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .python-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .python-section img.logo {
+      width: 120px;
+    }
+
+    .python-section img.cover {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    .python-section h2 {
+      font-size: 2.5em;
+      margin: 20px 0 10px;
+      color: #C0392B; /* red instead of blue */
+    }
+
+    .python-section p {
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .code-links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background-color: #f0f0f0;
+      color: #222;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .code-links a:hover {
+      background-color: #C0392B;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    .love-python {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #fbeaea; /* light red background */
       color: #333;
     }
 
-    header {
-      background-color: #b30000; /* red */
-      color: white;
-      padding: 20px 0;
-      text-align: center;
+    .love-python h2 {
+      color: #C0392B;
+      margin-bottom: 15px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    nav {
-      background-color: #e60000; /* red */
-      text-align: center;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h2 {
-      color: #cc0000; /* red heading */
-      border-bottom: 2px solid #cc0000;
-      padding-bottom: 5px;
-    }
-
-    .section p {
-      line-height: 1.6;
-    }
-
-    .project {
-      background: #ffe5e5;
-      padding: 15px;
-      border-left: 5px solid #cc0000;
+    .love-python p {
+      font-size: 1.1rem;
       margin-bottom: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .project h3 {
-      margin-top: 0;
+    .love-python ul {
+      list-style-type: none;
+      padding: 0;
     }
 
-    footer {
-      background-color: #b30000;
-      color: white;
-      text-align: center;
-      padding: 20px;
+    .love-python li {
+      font-size: 1rem;
+      padding: 10px 0;
+      color: #222;
     }
 
-    .logo {
-      width: 50px;
-      height: auto;
+    .timeline-section h2,
+    .certificates-section h2,
+    .testimonials-section h2 {
+      color: #C0392B;
     }
 
-    img.cover {
-      width: 100%;
-      height: auto;
-      border: 2px solid #cc0000;
-      margin-top: 20px;
+    .timeline-item h4 {
+      color: #C0392B;
+    }
+
+    .projects-container h3 {
+      color: #C0392B;
+    }
+
+    .social-icons svg {
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>HTML Skills</h1>
-  </header>
+<section class="python-section">
+  <img class="logo" src="../images/html_logo.png" alt="HTML Logo">
+  <img class="cover" src="../images/html_cover.jpg" alt="HTML Cover">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="python-skills.html">Python</a>
-    <a href="html-skills.html">HTML</a>
-    <a href="css-skills.html">CSS</a>
-  </nav>
+  <h2>Welcome to My HTML Skills</h2>
+  <p>
+    HTML is the backbone of web development, used to structure content on the web. It's the foundation upon which modern websites are built.
+    I've been learning HTML through projects, tutorials, and consistent practice.
+  </p>
+</section>
 
-  <div class="container">
-    <section class="section">
-      <h2>What I Learned</h2>
-      <p>I learned the core concepts of HTML including semantic tags, structure, elements like headings, paragraphs, forms, tables, media, and how to build proper web page layouts.</p>
-    </section>
+<section style="padding: 3rem 0;" id="html-projects">
+  <h2>My HTML Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <img src="../images/html_form_project.jpg" alt="Project Image">
+      <h3>Form Design</h3>
+      <p>Designed a fully responsive form layout using HTML and styled it with CSS.</p>
+      <a href="https://github.com/yourusername/html-form-design" target="_blank">View Code</a>
+    </div>
 
-    <section class="section">
-      <h2>Logo</h2>
-      <img src="images/html-logo.png" alt="HTML Logo" class="logo" />
-    </section>
+    <div class="project-card">
+      <img src="../images/html_table_project.jpg" alt="Project Image">
+      <h3>Table Format Page</h3>
+      <p>Created clean and structured HTML tables for presenting data effectively.</p>
+      <a href="https://github.com/yourusername/html-table-page" target="_blank">View Code</a>
+    </div>
 
-    <section class="section">
-      <h2>Cover Image</h2>
-      <img src="images/html-cover.jpg" alt="HTML Cover" class="cover" />
-    </section>
-
-    <section class="section">
-      <h2>Projects</h2>
-
-      <div class="project">
-        <h3>1. HTML Resume</h3>
-        <p>A simple resume page built using only HTML tags like headings, lists, and tables.</p>
-        <a href="projects/html-resume.html" target="_blank">View Project</a>
-      </div>
-
-      <div class="project">
-        <h3>2. Personal Web Page</h3>
-        <p>Designed a basic personal web page with image, links, and contact section using semantic HTML.</p>
-        <a href="projects/personal-page.html" target="_blank">View Project</a>
-      </div>
-
-      <div class="project">
-        <h3>3. HTML Form Design</h3>
-        <p>Created a functional contact form using form elements like input, textarea, select, and buttons.</p>
-        <a href="projects/html-form.html" target="_blank">View Project</a>
-      </div>
-    </section>
+    <div class="project-card">
+      <img src="../images/html_landing_page.jpg" alt="Project Image">
+      <h3>Landing Page</h3>
+      <p>A responsive landing page created using only HTML and minimal CSS.</p>
+      <a href="https://github.com/yourusername/html-landing-page" target="_blank">View Code</a>
+    </div>
   </div>
+</section>
 
-  <footer>
-    &copy; 2025 Sameer Mishra | HTML Skills Page
-  </footer>
+<section class="timeline-section">
+  <h2>My HTML Journey</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>Started with Basics</h4>
+      <p>Tags, Elements, Attributes, Structure, and Boilerplate.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Lists, Links & Images</h4>
+      <p>Created webpages using anchor tags, image tags, ordered/unordered lists.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Tables and Forms</h4>
+      <p>Built data tables and interactive forms with inputs, labels, and more.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Semantic HTML</h4>
+      <p>Used semantic tags for better SEO and accessibility.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Mini Projects</h4>
+      <p>Form Layout, Table Display, Landing Page, Resume Page.</p>
+    </div>
+  </div>
+</section>
+
+<section class="certificates-section">
+  <h2>Certifications & Achievements</h2>
+  <div class="certificate-grid">
+    <div class="certificate">
+      <img src="../images/html_basic_certificate.jpg" alt="HTML Certification">
+      <p>HTML (Basic) Certificate - HackerRank</p>
+    </div>
+    <div class="certificate">
+      <img src="../images/web_design_badge.png" alt="Web Design Badge">
+      <p>Responsive Web Design - freeCodeCamp</p>
+    </div>
+    <div class="certificate">
+      <img src="../images/html_css_course.jpg" alt="HTML CSS Certificate">
+      <p>HTML & CSS for Beginners - Coursera</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <h2>My Learning Highlights</h2>
+  <p>I’ve received great feedback for my clean HTML structure, semantic usage, and responsive layouts.</p>
+</section>
+
+<section class="love-python">
+  <h2>Why I Love HTML</h2>
+  <p>
+    HTML is the first step into web development. It gives structure to your creativity and allows for infinite possibilities when combined with CSS & JS.
+  </p>
+  <ul>
+    <li> Simple syntax and beginner-friendly</li>
+    <li> Essential for every website</li>
+    <li> Forms, tables, media — all made easy</li>
+    <li> SEO-friendly with semantic tags</li>
+    <li> Forms the structure of modern web apps</li>
+  </ul>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Sameer Kumar Mishra. All rights reserved.</p>
+    <!-- Social icons same as original -->
+    <!-- ... paste the same footer content from your existing file ... -->
+  </div>
+</footer>
 
 </body>
 </html>
