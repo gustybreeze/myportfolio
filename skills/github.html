@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Git & GitHub Skills - Sameer Kumar Mishra</title>
+  <title>GitHub Skills - Sameer Kumar Mishra</title>
   <link rel="stylesheet" href="../style.css" />
   <style>
-    .skill-section {
+    body {
+      background-color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .python-section {
       padding: 60px 20px;
       text-align: center;
     }
 
-    .skill-section img.logo {
+    .python-section img.logo {
       width: 120px;
     }
 
-    .skill-section img.cover {
+    .python-section img.cover {
       width: 100%;
       max-height: 300px;
       object-fit: cover;
@@ -23,13 +28,13 @@
       border-radius: 10px;
     }
 
-    .skill-section h2 {
+    .python-section h2 {
       font-size: 2.5em;
       margin: 20px 0 10px;
-      color: #24292e; /* GitHub black */
+      color: #fbc02d;
     }
 
-    .skill-section p {
+    .python-section p {
       font-size: 1.1em;
       max-width: 800px;
       margin: 0 auto 30px;
@@ -50,29 +55,188 @@
     }
 
     .code-links a:hover {
-      background-color: #24292e;
+      background-color: #fbc02d;
       color: white;
       transform: scale(1.05);
+    }
+
+    .love-python {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #fffde7;
+      color: #333;
+    }
+
+    .love-python h2 {
+      color: #fbc02d;
+      margin-bottom: 15px;
+    }
+
+    .love-python p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .love-python ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .love-python li {
+      font-size: 1rem;
+      padding: 10px 0;
+      color: #222;
+    }
+
+    .project-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      padding: 20px;
+      width: 280px;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: 0.3s ease;
+    }
+
+    .card h3 {
+      color: #fbc02d;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .card a {
+      display: inline-block;
+      background-color: #fbc02d;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .card a:hover {
+      background-color: #c49000;
+    }
+
+    .card-icon {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: block;
     }
   </style>
 </head>
 <body>
+  <section class="python-section">
+    <img class="logo" src="../images/github_logo.png" alt="GitHub Logo">
+    <img class="cover" src="../images/github_cover.jpg" alt="GitHub Cover">
 
-<section class="skill-section">
-  <img class="logo" src="../images/github_logo.png" alt="GitHub Logo">
-  <img class="cover" src="../images/github_cover.jpg" alt="GitHub Cover">
-
-    <h2>Git & GitHub - Version Control</h2>
+    <h2>Welcome to My GitHub Skills</h2>
     <p>
-      Git is a distributed version control system that helps manage code history. GitHub is a cloud platform where I host my repositories, collaborate on projects, and showcase my work.
-      I use Git commands like <code>commit</code>, <code>push</code>, <code>clone</code>, and <code>branch</code> daily.
+      GitHub is a platform for version control and collaboration. I use GitHub to host my projects, collaborate with developers, and contribute to open source.
     </p>
 
-    <div class="code-links">
-      <a href="https://github.com/gustybreeze" target="_blank">My GitHub Profile</a>
-      <a href="https://github.com/gustybreeze/python-mini-projects" target="_blank">Python Projects Repo</a>
-      <a href="https://github.com/gustybreeze/web-dev-practice" target="_blank">Web Dev Practice</a>
-    </div>
+    <section style="padding: 3rem 0;" id="github-projects">
+      <h2>My GitHub Projects</h2>
+      <div class="project-cards">
+        <div class="card">
+          <img src="../images/portfolio_icon.png" alt="Project Image" class="card-icon">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio showcasing my work, hosted using GitHub Pages.</p>
+          <a href="https://github.com/yourusername/portfolio" target="_blank">View Code</a>
+        </div>
+
+        <div class="card">
+          <img src="../images/resume_icon.jpg" alt="Project Image" class="card-icon">
+          <h3>Resume Page</h3>
+          <p>A responsive resume hosted and versioned on GitHub repository.</p>
+          <a href="https://github.com/yourusername/resume" target="_blank">View Code</a>
+        </div>
+
+        <div class="card">
+          <img src="../images/landing_page_icon.png" alt="Project Image" class="card-icon">
+          <h3>Open Source Contributions</h3>
+          <p>Contributed to various open-source projects including documentation and code improvements.</p>
+          <a href="https://github.com/yourusername" target="_blank">View Profile</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <h2>My GitHub Journey</h2>
+      <div class="project-cards">
+        <div class="card">
+          <h3>Version Control Basics</h3>
+          <p>Learned Git commands: init, add, commit, push, pull, branch, merge.</p>
+        </div>
+
+        <div class="card">
+          <h3>Collaboration</h3>
+          <p>Worked on collaborative projects using branches and pull requests.</p>
+        </div>
+
+        <div class="card">
+          <h3>GitHub Actions</h3>
+          <p>Set up CI/CD workflows and automated deployment pipelines.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="certificates-section">
+      <h2>Certifications & Achievements</h2>
+      <div class="project-cards">
+        <div class="card">
+          <img src="../images/img.jpg" alt="GitHub Certification" class="card-icon">
+          <h3>Git & GitHub Certificate</h3>
+          <p>Issued by Coursera</p>
+        </div>
+
+        <div class="card">
+          <img src="../images/data_analysis_badge.png" alt="Badge" class="card-icon">
+          <h3>Open Source Contributor</h3>
+          <p>Recognized for contributing to educational repositories.</p>
+        </div>
+
+        <div class="card">
+          <img src="../images/flask_webdev_cert.jpg" alt="GitHub Web Certificate" class="card-icon">
+          <h3>GitHub Projects & Pages</h3>
+          <p>Issued by freeCodeCamp</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="love-python">
+      <h2>Why I Love GitHub</h2>
+      <p>
+        GitHub makes collaboration and project sharing easy and efficient. It's an essential tool for modern developers.
+      </p>
+      <ul>
+        <li> Version control with Git</li>
+        <li> Collaboration via Pull Requests</li>
+        <li> Open source contribution</li>
+        <li> Project hosting via GitHub Pages</li>
+        <li> Workflow automation with Actions</li>
+      </ul>
+    </section>
   </section>
 <footer>
   <div class="footer-content">
