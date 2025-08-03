@@ -117,7 +117,7 @@ header {
   background: #fff;
   color: #0072ff;
   border: none;
-  border-radius: 5px;
+  border-radius: 0px;
   font-weight: bold;
   text-decoration: none;
   transition: 0.3s;
@@ -529,6 +529,7 @@ html {
   /* border: 5px solid white; */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.);
 }
+
 
 
 
