@@ -97,7 +97,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* color: white; */
+  color: teal;
 }
 
 .hero h1 {
@@ -431,7 +431,6 @@ html {
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  scroll-margin-top: 120px;
 }
 
 .journey-block {
@@ -530,13 +529,11 @@ html {
   /* border: 5px solid white; */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.);
 }
-/* navbar overlap on section scroll */
-section {
-  scroll-margin-top: 90px; 
-}
+
 html {
-  scroll-padding-top: 90px; 
+  scroll-padding-top: 100px; 
 }
+
 
 
 
