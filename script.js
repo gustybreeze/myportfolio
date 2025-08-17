@@ -9,3 +9,16 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     document.getElementById("navLinks").classList.remove("show");
   });
 });
+
+  const modeToggle = document.getElementById("modeToggle");
+  const body = document.body;
+
+  modeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    
+    if (body.classList.contains("dark-mode")) {
+      modeToggle.textContent = "Light Mode";
+    } else {
+      modeToggle.textContent = "Dark Mode";
+    }
+  });
