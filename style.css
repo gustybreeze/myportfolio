@@ -538,8 +538,8 @@ body.dark-mode {
   color: #ffffff;
 }
 
-header.dark-mode, 
-.navbar.dark-mode {
+body.dark-mode header, 
+body.dark-mode .navbar {
   background: #1e1e1e;
 }
 
@@ -548,6 +548,7 @@ body.dark-mode .card {
   background: #2a2a2a;
   color: #ffffff;
 }
+
 /* Default heading */
 section h2 {
   color: #222;
@@ -557,6 +558,8 @@ section h2 {
 body.dark-mode section h2 {
   color: #fff;
 }
+
+
 
 
 
