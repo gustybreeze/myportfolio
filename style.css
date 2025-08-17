@@ -534,9 +534,22 @@ html {
   scroll-padding-top: 100px; 
 }
 body.dark-mode {
-  background-color: #121212; 
-  color: #ffffff;           
+  background-color: #121212;
+  color: #ffffff;
 }
+
+header.dark-mode, 
+.navbar.dark-mode {
+  background: #1e1e1e;
+}
+
+.project-card.dark-mode, 
+.card.dark-mode {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+
 
 
 
