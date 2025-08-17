@@ -1,24 +1,36 @@
+// ====== Toggle Navigation Menu ======
 function toggleMenu() {
   const navLinks = document.getElementById("navLinks");
   navLinks.classList.toggle("show");
 }
 
-// Optional: Scroll to section on link click (smooth effect already via CSS)
-document.querySelectorAll(".nav-links a").forEach(link => {
+// Close menu when a link is clicked
+document.querySelectorAll("#navLinks a").forEach(link => {
   link.addEventListener("click", () => {
     document.getElementById("navLinks").classList.remove("show");
   });
 });
 
-  const modeToggle = document.getElementById("modeToggle");
-  const body = document.body;
+// ====== Dark / Light Mode Toggle ======
+const modeToggle = document.getElementById("modeToggle");
+const body = document.body;
 
-  modeToggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    
-    if (body.classList.contains("dark-mode")) {
-      modeToggle.textContent = "Light Mode";
-    } else {
-      modeToggle.textContent = "Dark Mode";
-    }
-  });
+// Check if user had previously selected dark mode (localStorage)
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  modeToggle.textContent = "Light Mode";
+} else {
+  modeToggle.textContent = "Dark Mode";
+}
+
+modeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    modeToggle.textContent = "Light Mode";
+    localStorage.setItem("theme", "dark");
+  } else {
+    modeToggle.textContent = "Dark Mode";
+    localStorage.setItem("theme", "light");
+  }
+});
