@@ -529,6 +529,11 @@ html {
   /* border: 5px solid white; */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.);
 }
+/* navbar overlap on section scroll */
+section {
+  scroll-margin-top: 80px; 
+}
+
 
 
 
