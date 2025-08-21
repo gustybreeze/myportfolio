@@ -57,7 +57,12 @@
     @media (max-width:520px){.statbar{grid-template-columns:1fr}}
   </style>
 </head>
-
+  
+  <!-- Music Control Button -->
+<button id="toggleMusic" style="position:absolute; top:20px; right:20px; padding:8px 12px; border-radius:10px; background:var(--accent); color:#0b1020; border:none; cursor:pointer;">
+  🔊 Music On
+</button>
+  
   <audio id="bgMusic" loop autoplay>
   <source src="retro-music.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
@@ -262,7 +267,7 @@
     // Boot
     startNewGame();
 
-    const bgMusic = document.getElementById("bgMusic");
+const bgMusic = document.getElementById("bgMusic");
 const toggleMusic = document.getElementById("toggleMusic");
 let musicOn = true;
 
@@ -277,7 +282,9 @@ toggleMusic.addEventListener("click", () => {
   musicOn = !musicOn;
 });
 
+
   </script>
 </body>
 </html>
+
 
