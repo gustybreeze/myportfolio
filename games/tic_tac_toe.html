@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <style>
+    /* Google Fonts for modern look */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+    }
+
+    .controls {
+      margin: 15px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .controls button {
+      margin: 5px;
+      padding: 12px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: transform 0.2s, background 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .controls button:hover {
+      transform: translateY(-3px);
+    }
+
+    #musicToggle {
+      background: #ffce00;
+      color: #333;
+    }
+
+    #musicToggle.off {
+      background: #dc3545;
+      color: #fff;
+    }
+
+    #playerButtons button {
+      background: #4caf50;
+      color: #fff;
+    }
+
+    #playerButtons button:hover {
+      background: #45a049;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 100px);
+      grid-gap: 10px;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      background: #fff;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.2em;
+      cursor: pointer;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .cell:hover {
+      transform: scale(1.05);
+      background: #f0f0f0;
+    }
+
+    .cell.taken {
+      cursor: not-allowed;
+      background: #ddd;
+      color: #555;
+      transform: none;
+    }
+
+    .status {
+      margin-top: 25px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    @media(max-width: 500px) {
+      .board {
+        grid-template-columns: repeat(3, 80px);
+        grid-gap: 8px;
+      }
+      .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 1.8em;
+      }
+      .controls button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+
+  <div class="controls">
+    <button onclick="setMode('single')">Single Player</button>
+    <button onclick="setMode('two')">Two Players</button>
+    <button onclick="resetGame()">🔄 Reset</button>
+    <button id="musicToggle" onclick="toggleMusic()">🔊 Music On</button>
+  </div>
+
+  <div class="controls" id="playerButtons" style="display: none;">
+    <button onclick="setCurrentPlayer('X')">Player 1 (X)</button>
+    <button onclick="setCurrentPlayer('O')">Player 2 (O)</button>
+  </div>
+
+  <div class="board" id="board"></div>
+  <div class="status" id="status">Choose a mode to start the game.</div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-creativeminds.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    let board = ["", "", "", "", "", "", "", "", ""];
+    let currentPlayer = "X";
+    let gameActive = false;
+    let mode = "";
+    let musicPlaying = true;
+
+    const boardElement = document.getElementById("board");
+    const statusElement = document.getElementById("status");
+    const playerButtons = document.getElementById("playerButtons");
+    const bgMusic = document.getElementById("bgMusic");
+    const musicToggle = document.getElementById("musicToggle");
+
+    function createBoard() {
+      boardElement.innerHTML = "";
+      board.forEach((cell, index) => {
+        const div = document.createElement("div");
+        div.classList.add("cell");
+        div.dataset.index = index;
+        if(cell) div.classList.add("taken");
+        div.textContent = cell;
+        div.addEventListener("click", handleCellClick);
+        boardElement.appendChild(div);
+      });
+    }
+
+    function setMode(selectedMode) {
+      mode = selectedMode;
+      resetGame();
+      gameActive = true;
+      if (mode === "single") {
+        playerButtons.style.display = "none";
+        statusElement.textContent = "Single Player Mode: You are X. Computer is O.";
+      } else {
+        playerButtons.style.display = "flex";
+        statusElement.textContent = "Two Player Mode: Player 1 is X, Player 2 is O.";
+      }
+    }
+
+    function handleCellClick(event) {
+      const index = event.target.dataset.index;
+      if (!gameActive || board[index] !== "") return;
+
+      board[index] = currentPlayer;
+      createBoard();
+
+      if (checkWin()) {
+        statusElement.textContent = `Player ${currentPlayer} wins!`;
+        gameActive = false;
+        return;
+      }
+
+      if (!board.includes("")) {
+        statusElement.textContent = "It's a draw!";
+        gameActive = false;
+        return;
+      }
+
+      if (mode === "single") {
+        currentPlayer = currentPlayer === "X" ? "O" : "X";
+        if (currentPlayer === "O") setTimeout(computerMove, 500);
+      } else {
+        currentPlayer = currentPlayer === "X" ? "O" : "X";
+        statusElement.textContent = `Player ${currentPlayer}'s turn.`;
+      }
+    }
+
+    function computerMove() {
+      let available = board.map((v, i) => (v === "" ? i : null)).filter(v => v !== null);
+      let move = available[Math.floor(Math.random() * available.length)];
+      board[move] = "O";
+      createBoard();
+
+      if (checkWin()) {
+        statusElement.textContent = "Computer wins!";
+        gameActive = false;
+        return;
+      }
+
+      if (!board.includes("")) {
+        statusElement.textContent = "It's a draw!";
+        gameActive = false;
+        return;
+      }
+
+      currentPlayer = "X";
+      statusElement.textContent = "Your turn!";
+    }
+
+    function checkWin() {
+      const winPatterns = [
+        [0,1,2],[3,4,5],[6,7,8],
+        [0,3,6],[1,4,7],[2,5,8],
+        [0,4,8],[2,4,6]
+      ];
+      return winPatterns.some(pattern => {
+        const [a,b,c] = pattern;
+        return board[a] && board[a] === board[b] && board[a] === board[c];
+      });
+    }
+
+    function resetGame() {
+      board = ["", "", "", "", "", "", "", "", ""];
+      currentPlayer = "X";
+      gameActive = mode !== "";
+      createBoard();
+      statusElement.textContent = mode === "" ? "Choose a mode to start." :
+        (mode === "single" ? "Single Player Mode: You are X. Computer is O." : "Two Player Mode: Player 1 is X, Player 2 is O.");
+    }
+
+    function setCurrentPlayer(player) {
+      if (mode === "two") {
+        currentPlayer = player;
+        statusElement.textContent = `Player ${player}'s turn.`;
+      }
+    }
+
+    function toggleMusic() {
+      if (musicPlaying) {
+        bgMusic.pause();
+        musicToggle.textContent = "🔇 Music Off";
+        musicToggle.classList.add("off");
+      } else {
+        bgMusic.play();
+        musicToggle.textContent = "🔊 Music On";
+        musicToggle.classList.remove("off");
+      }
+      musicPlaying = !musicPlaying;
+    }
+
+    createBoard();
+    bgMusic.play();
+  </script>
+</body>
+</html>
